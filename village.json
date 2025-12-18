@@ -1,0 +1,22 @@
+{
+"residents": [
+  {"name": "Abdullahi", "points": 4, "gender": "M", "day": 14, "month": 11, "year": 1999},
+  {"name": "Amir", "points": 0, "gender": "M", "day": 1, "month": 11, "year": 2005},
+  {"name": "Dominika", "points": 0, "gender": "F", "day": 28, "month": 3, "year": 2002},
+  {"name": "Jiashou", "points": 0, "gender": "M", "day": 23, "month": 3, "year": 2007},
+  {"name": "Wenshi", "points": 0, "gender": "F", "day": 20, "month": 1, "year": 2006},
+  {"name": "Test", "points": 10, "gender": "M", "day": 1, "month": 1, "year": 2000}
+],
+"tasks": [
+  {"name": "123", "points": 123, "description": "321"}
+],
+"greenActions": [
+  {"name": "Green Action 1", "points": 2, "description": "Description 1"}
+],
+"tradeOffers": [
+  {"name": "1", "points": 1, "description": "1", "seller": "Abdullahi"},
+  {"name": "apple", "points": 12, "description": "·", "seller": "Abdullahi"},
+  {"name": "·1", "points": 1, "description": "x", "seller": "Abdullahi"}
+],
+"communityPoints": 2
+}

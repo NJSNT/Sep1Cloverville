@@ -1,0 +1,223 @@
+/* Contact Page Specific Styles */
+
+.navbar-contacts {
+  background-color: rgba(45, 106, 79, 0.8);
+}
+
+.image-section-contacts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/strawberries.png") no-repeat center center/cover;
+  z-index: -1;
+  filter: brightness(0.9);
+}
+
+.contacts-page .text,
+.text.contacts {
+  width: 90%;
+  max-width: 1200px;
+  margin: 4rem auto;
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(3px);
+}
+
+.contacts-page .text h1,
+.text.contacts h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #2d6a4f;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contacts-page .text>p,
+.text.contacts>p {
+  font-size: 1.1rem;
+  color: #1b4332;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.top-row,
+.bottom-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.wang,
+.abdul,
+.amir,
+.wenshi,
+.dominika {
+  background: linear-gradient(135deg, rgba(216, 243, 220, 0.7) 0%, rgba(183, 228, 199, 0.7) 100%);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(3px);
+}
+
+.wang:hover,
+.abdul:hover,
+.amir:hover,
+.wenshi:hover,
+.dominika:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.wang img,
+.abdul img,
+.amir img,
+.wenshi img,
+.dominika img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #2d6a4f;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.wang h2,
+.abdul h2,
+.amir h2,
+.wenshi h2,
+.dominika h2 {
+  font-size: 1.5rem;
+  color: #2d6a4f;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.wang p,
+.abdul p,
+.amir p,
+.wenshi p,
+.dominika p {
+  font-size: 0.95rem;
+  color: #1b4332;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.wang p strong,
+.abdul p strong,
+.amir p strong,
+.wenshi p strong,
+.dominika p strong {
+  color: #2d6a4f;
+  font-weight: 600;
+}
+
+.wang a,
+.abdul a,
+.amir a,
+.wenshi a,
+.dominika a {
+  color: #2d6a4f;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.wang a:hover,
+.abdul a:hover,
+.amir a:hover,
+.wenshi a:hover,
+.dominika a:hover {
+  color: #1b4332;
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+
+  .contacts-page .text,
+  .text.contacts {
+    padding: 2rem;
+    margin: 3rem auto;
+  }
+
+  .contacts-page .text h1,
+  .text.contacts h1 {
+    font-size: 2rem;
+  }
+
+  .top-row,
+  .bottom-row {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .wang img,
+  .abdul img,
+  .amir img,
+  .wenshi img,
+  .dominika img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .contacts-page .text,
+  .text.contacts {
+    padding: 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .contacts-page .text h1,
+  .text.contacts h1 {
+    font-size: 1.8rem;
+  }
+
+  .contacts-page .text>p,
+  .text.contacts>p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .top-row,
+  .bottom-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .wang,
+  .abdul,
+  .amir,
+  .wenshi,
+  .dominika {
+    padding: 1.5rem;
+  }
+
+  .wang img,
+  .abdul img,
+  .amir img,
+  .wenshi img,
+  .dominika img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .wang h2,
+  .abdul h2,
+  .amir h2,
+  .wenshi h2,
+  .dominika h2 {
+    font-size: 1.3rem;
+  }
+}
