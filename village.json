@@ -1,22 +1,139 @@
 {
-"residents": [
-  {"name": "Abdullahi", "points": 4, "gender": "M", "day": 14, "month": 11, "year": 1999},
-  {"name": "Amir", "points": 0, "gender": "M", "day": 1, "month": 11, "year": 2005},
-  {"name": "Dominika", "points": 0, "gender": "F", "day": 28, "month": 3, "year": 2002},
-  {"name": "Jiashou", "points": 0, "gender": "M", "day": 23, "month": 3, "year": 2007},
-  {"name": "Wenshi", "points": 0, "gender": "F", "day": 20, "month": 1, "year": 2006},
-  {"name": "Test", "points": 10, "gender": "M", "day": 1, "month": 1, "year": 2000}
-],
-"tasks": [
-  {"name": "123", "points": 123, "description": "321"}
-],
-"greenActions": [
-  {"name": "Green Action 1", "points": 2, "description": "Description 1"}
-],
-"tradeOffers": [
-  {"name": "1", "points": 1, "description": "1", "seller": "Abdullahi"},
-  {"name": "apple", "points": 12, "description": "·", "seller": "Abdullahi"},
-  {"name": "·1", "points": 1, "description": "x", "seller": "Abdullahi"}
-],
-"communityPoints": 2
+  "residents": [
+    {
+      "name": "Abdullahi",
+      "points": 4,
+      "gender": "M",
+      "day": 14,
+      "month": 11,
+      "year": 1999
+    },
+    {
+      "name": "Amir",
+      "points": 0,
+      "gender": "M",
+      "day": 1,
+      "month": 11,
+      "year": 2005
+    },
+    {
+      "name": "Dominika",
+      "points": 0,
+      "gender": "F",
+      "day": 28,
+      "month": 3,
+      "year": 2002
+    },
+    {
+      "name": "Jiashou",
+      "points": 0,
+      "gender": "M",
+      "day": 23,
+      "month": 3,
+      "year": 2007
+    },
+    {
+      "name": "Wenshi",
+      "points": 0,
+      "gender": "F",
+      "day": 20,
+      "month": 1,
+      "year": 2006
+    },
+    {
+      "name": "Test",
+      "points": 10,
+      "gender": "M",
+      "day": 1,
+      "month": 1,
+      "year": 2000
+    }
+  ],
+  "tasks": [
+    {
+      "name": "Take out trash",
+      "points": 3,
+      "description": "Bring trash + recycling to collection point."
+    },
+    {
+      "name": "Kitchen cleaning",
+      "points": 5,
+      "description": "Clean stove, countertop, sink, and floor."
+    },
+    {
+      "name": "Bathroom deep clean",
+      "points": 8,
+      "description": "Scrub shower/toilet; replace empty supplies."
+    },
+    {
+      "name": "Weekly inventory",
+      "points": 2,
+      "description": "Check shared items (soap, paper, etc.) and note shortages."
+    },
+    {
+      "name": "Quiet hours check",
+      "points": 1,
+      "description": "Ensure common area is quiet after 22:00."
+    }
+  ],
+  "greenActions": [
+    {
+      "name": "Bike to work/school",
+      "points": 2,
+      "description": "Use a bike instead of a car for one day."
+    },
+    {
+      "name": "Bring reusable cup",
+      "points": 1,
+      "description": "Use a reusable bottle/cup when buying drinks."
+    },
+    {
+      "name": "Short shower",
+      "points": 2,
+      "description": "Keep shower under 5 minutes."
+    },
+    {
+      "name": "Meat-free day",
+      "points": 3,
+      "description": "Eat vegetarian for one full day."
+    },
+    {
+      "name": "LED swap",
+      "points": 4,
+      "description": "Replace one bulb with an LED equivalent."
+    }
+  ],
+  "tradeOffers": [
+    {
+      "name": "Old textbook",
+      "points": 6,
+      "description": "Intro to Programming (used), good condition.",
+      "seller": "Dominika"
+    },
+    {
+      "name": "Rice (2kg)",
+      "points": 4,
+      "description": "Unopened bag, best before next year.",
+      "seller": "Wenshi"
+    },
+    {
+      "name": "Desk lamp",
+      "points": 5,
+      "description": "Working, warm light bulb included.",
+      "seller": "Amir"
+    },
+    {
+      "name": "Coffee beans 250g",
+      "points": 7,
+      "description": "Medium roast, sealed.",
+      "seller": "Abdullahi"
+    },
+    {
+      "name": "Laundry detergent",
+      "points": 3,
+      "description": "Half bottle left, free pickup.",
+      "seller": "Test"
+    }
+  ],
+  "communityPoints": 27
 }
