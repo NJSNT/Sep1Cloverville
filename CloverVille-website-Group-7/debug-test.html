@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Test</title>
+
+    <style>
+        /* Basic page typography */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Container style for debug blocks */
+        .debug-section {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .success {
+            color: green;
+        }
+
+        /* Styling for raw JSON output */
+        pre {
+            background: #fff;
+            padding: 10px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CloverVille Debug Test</h1>
+
+    <!-- Section 1: JSON Loading Test -->
+    <div class="debug-section">
+        <h2>1. JSON Loading Test</h2>
+        <div id="json-status">Loading...</div>
+        <pre id="json-content"></pre>
+    </div>
+
+    <!-- Section 2: Trade Offers Rendering Test -->
+    <div class="debug-section">
+        <h2>2. Trade Offers Display Test</h2>
+        <div id="trade-offers-container"></div>
+    </div>
+
+    <script>
+        // Test JSON loading
+        async function testJSONLoading() {
+            const statusDiv = document.getElementById('json-status');
+            const contentPre = document.getElementById('json-content');
+
+            try {
+                console.log('Attempting to fetch: ../village.json');
+                const response = await fetch('../village.json');
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                statusDiv.innerHTML = '<span class="success">✓ JSON loaded successfully!</span>';
+                contentPre.textContent = JSON.stringify(data, null, 2);
+
+                // Test display function
+                displayTradeOffers(data);
+
+            } catch (error) {
+                statusDiv.innerHTML = `<span class="error">✗ Error: ${error.message}</span>`;
+                contentPre.textContent = error.stack;
+                console.error('Error loading JSON:', error);
+            }
+        }
+
+        // Display trade offers
+        function displayTradeOffers(villageData) {
+            const container = document.getElementById('trade-offers-container');
+
+            if (!villageData || !villageData.tradeOffers) {
+                container.innerHTML = '<p class="error">No tradeOffers data found</p>';
+                return;
+            }
+
+            if (villageData.tradeOffers.length === 0) {
+                container.innerHTML = '<p>No trade offers available</p>';
+                return;
+            }
+
+            const offersHTML = villageData.tradeOffers.map(offer => `
+                <div style="border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 5px;">
+                    <h3>${offer.name || 'Unnamed Offer'}</h3>
+                    <p><strong>Description:</strong> ${offer.description || 'No description'}</p>
+                    <p><strong>Points:</strong> ${offer.points || 0}</p>
+                    <p><strong>Seller:</strong> ${offer.seller || 'N/A'}</p>
+                </div>
+            `).join('');
+
+            container.innerHTML = offersHTML;
+        }
+
+        // Run test on page load
+        document.addEventListener('DOMContentLoaded', testJSONLoading);
+    </script>
+</body>
+
+</html>

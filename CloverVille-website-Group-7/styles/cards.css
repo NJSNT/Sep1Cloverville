@@ -1,0 +1,137 @@
+/* Shared Cards Styles (Trade, Tasks, Green Actions) */
+
+.offers-container,
+.tasks-container,
+.green-actions-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.trade-offer-card,
+.task-card,
+.green-action-card {
+  background: linear-gradient(135deg, rgba(216, 243, 220, 0.8) 0%, rgba(183, 228, 199, 0.8) 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(3px);
+}
+
+.trade-offer-card:hover,
+.task-card:hover,
+.green-action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.trade-offer-card h3,
+.task-card h3,
+.green-action-card h3 {
+  color: #2d6a4f;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.description {
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  text-align: left !important;
+}
+
+.offer-details,
+.task-details,
+.action-points {
+  border-top: 2px solid #2d6a4f;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.offer-details p,
+.task-details p {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.offer-details strong,
+.task-details strong {
+  color: #2d6a4f;
+}
+
+.points-badge {
+  background: #2d6a4f;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.action-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.no-data {
+  text-align: center;
+  color: #888;
+  font-size: 1.2rem;
+  padding: 3rem;
+  grid-column: 1 / -1;
+}
+
+/* Animations */
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* Responsive Grid System */
+
+@media (min-width: 1025px) {
+
+  .offers-container,
+  .tasks-container,
+  .green-actions-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .offers-container,
+  .tasks-container,
+  .green-actions-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .offers-container,
+  .tasks-container,
+  .green-actions-container {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+
+  .trade-offer-card,
+  .task-card,
+  .green-action-card {
+    padding: 1rem;
+  }
+}
